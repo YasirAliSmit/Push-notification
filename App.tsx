@@ -4,13 +4,15 @@ import {
   requestUserPermission,
   notificationServices,
 } from './src/utilites/PushNotification';
-import Notification from './src/utilites/screen/Notification';
+import Notification from './src/screen/Notification';
+import Navigation from './src/Navigation/Navigation';
 
 const App = () => {
   //There are Three type of Notification
   //1.Forground Mode it means our app is open
   //2.background Mode Notication it means our is not open
   //3.Kill Mode it means our app is properly close
+  
   useEffect(() => {
     requestUserPermission();
     notificationServices();
@@ -18,7 +20,7 @@ const App = () => {
 
    
   return (
-  <Notification/>
+  <Navigation/>
   );
 };
 //https://www.youtube.com/watch?v=p0w-1Xcc4tE
